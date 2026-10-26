@@ -28,10 +28,13 @@ Tujuan pengerjaan repository ini adalah untuk memahami konsep-konsep statistik y
 Practical-Statistics-for-Data-Scientists
 │
 ├── README.md
-├── Chapter 1 - Exploratory Data Analysis.ipynb
-├── Chapter 2 - Data and Sampling Distributions.ipynb
-├── Chapter 3 - Statistical Experiments and Significance Testing.ipynb
-└── Chapter 4 - Regression and Prediction.ipynb
+├── Chapter_1_Exploratory_Data_Analysis.ipynb
+├── Chapter_2_Data_And_Sampling_Distribution.ipynb
+├── Chapter_3_Statistical_Experiments_and_Significance_Testing.ipynb
+├── Chapter_4_Regression_and_Prediction.ipynb
+├── Chapter_5_Classification.ipynb
+├── Chapter_6_Statistical_Machine_Learning.ipynb
+└── Chapter_7_Unsupervised_Learning.ipynb
 ```
 
 ---
@@ -182,6 +185,60 @@ Untuk hubungan yang tidak linear, polynomial regression, splines, dan GAM dapat 
 
 ---
 
+## Chapter 5 — Classification
+
+Chapter kelima membahas **klasifikasi**, yaitu memprediksi kategori (misalnya *default* atau *paid off*) dari sekumpulan predictor, menggunakan data pinjaman LendingClub.
+
+Materi yang dibahas meliputi:
+
+- Naive Bayes (conditional probability, Laplace smoothing)
+- Discriminant Analysis (LDA, covariance matrix, Fisher's linear discriminant)
+- Logistic Regression (logit, odds ratio, GLM, maximum likelihood, deviance)
+- Evaluating Classification Models: confusion matrix, precision, recall, specificity, ROC curve, AUC, lift
+- Strategies for Imbalanced Data: undersampling, oversampling, weighting, SMOTE, cost-based classification
+
+### Kesimpulan Chapter 5
+
+Klasifikasi memprediksi kategori hasil dengan memperkirakan probabilitas kelas. Model dievaluasi bukan hanya dengan akurasi, tetapi juga precision, recall, specificity, ROC/AUC, dan lift, terutama pada data tidak seimbang di mana strategi resampling, weighting, dan cutoff berbasis biaya diperlukan.
+
+---
+
+## Chapter 6 — Statistical Machine Learning
+
+Chapter keenam membahas metode **statistical machine learning** yang bersifat data-driven dan tidak memaksakan struktur linear pada data.
+
+Materi yang dibahas meliputi:
+
+- K-Nearest Neighbors: distance metrics, one hot encoding, standardization (z-score), memilih K, KNN sebagai feature engine
+- Tree Models: recursive partitioning, Gini impurity dan entropy, mengontrol kompleksitas tree
+- Bagging dan Random Forest: out-of-bag error, variable importance, hyperparameters
+- Boosting: Adaboost, gradient boosting, XGBoost, regularization, hyperparameters dan cross-validation
+
+### Kesimpulan Chapter 6
+
+KNN dan tree model belajar langsung dari data tanpa model struktural. Metode ensemble (random forest dan boosting) mempertajam daya prediksi tree. Random forest relatif kokoh dengan sedikit tuning, sedangkan boosting (XGBoost) sangat kuat tetapi memerlukan regularization dan cross-validation agar tidak overfit.
+
+---
+
+## Chapter 7 — Unsupervised Learning
+
+Chapter ketujuh membahas **unsupervised learning**, yaitu mengekstrak struktur dari data tanpa variabel respons.
+
+Materi yang dibahas meliputi:
+
+- Principal Components Analysis: loadings, screeplot, memilih jumlah komponen
+- Correspondence Analysis
+- K-Means Clustering: interpretasi cluster, elbow method
+- Hierarchical Clustering: dendrogram dan ukuran dissimilarity (complete, single, average, Ward)
+- Model-Based Clustering: multivariate normal, mixture of normals, BIC
+- Scaling and Categorical Variables: standardisasi, variabel dominan, Gower's distance, masalah clustering data campuran
+
+### Kesimpulan Chapter 7
+
+Unsupervised learning menemukan struktur tanpa label. PCA dan correspondence analysis mereduksi atau memvisualisasikan data, sedangkan K-means, hierarchical, dan model-based clustering mengelompokkan record. Scaling sangat penting, dan untuk data campuran numerik-kategorikal Gower's distance lebih tepat daripada K-means pada dummy variable.
+
+---
+
 # 🛠️ Tools and Libraries
 
 Pengerjaan notebook menggunakan Python dan beberapa library yang digunakan dalam buku, antara lain:
@@ -196,6 +253,9 @@ Pengerjaan notebook menggunakan Python dan beberapa library yang digunakan dalam
 - Scikit-learn
 - dmba
 - PyGAM
+- XGBoost
+- imbalanced-learn
+- prince
 
 ---
 
@@ -207,12 +267,15 @@ Pengerjaan notebook menggunakan Python dan beberapa library yang digunakan dalam
 | Chapter 2 | Data and Sampling Distributions | ✅ Completed |
 | Chapter 3 | Statistical Experiments and Significance Testing | ✅ Completed |
 | Chapter 4 | Regression and Prediction | ✅ Completed |
+| Chapter 5 | Classification | ✅ Completed |
+| Chapter 6 | Statistical Machine Learning | ✅ Completed |
+| Chapter 7 | Unsupervised Learning | ✅ Completed |
 
 ---
 
 # 🎯 Learning Outcomes
 
-Setelah menyelesaikan Chapter 1–4, beberapa konsep yang telah dipelajari meliputi:
+Setelah menyelesaikan Chapter 1–7, beberapa konsep yang telah dipelajari meliputi:
 
 1. Melakukan Exploratory Data Analysis.
 2. Menggunakan statistik deskriptif untuk memahami data.
@@ -230,6 +293,11 @@ Setelah menyelesaikan Chapter 1–4, beberapa konsep yang telah dipelajari melip
 14. Menggunakan categorical variables dalam regression.
 15. Melakukan regression diagnostics.
 16. Memodelkan hubungan non-linear menggunakan polynomial regression, splines, dan GAM.
+17. Membangun dan mengevaluasi model klasifikasi (Naive Bayes, LDA, logistic regression) dengan confusion matrix, ROC, AUC, dan lift.
+18. Menangani data tidak seimbang dengan resampling, weighting, dan cost-based classification.
+19. Menggunakan KNN, decision tree, random forest, dan XGBoost, serta memahami overfitting dan regularization.
+20. Melakukan PCA, correspondence analysis, dan clustering (K-means, hierarchical, model-based).
+21. Memahami scaling dan Gower's distance untuk data campuran.
 
 ---
 
